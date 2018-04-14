@@ -1,6 +1,6 @@
-# RTW
+# Mohne
 
-Über dieses gitrepository können wir parallel am "Road to Wattens" - Projekt arbeiten.
+Über dieses gitrepository können wir parallel am "Mohne für NASA" - Projekt arbeiten.
 
 Ordnerstruktur:
 - 01_Projektmanagement:  Bereich für Bericht und Organisation
