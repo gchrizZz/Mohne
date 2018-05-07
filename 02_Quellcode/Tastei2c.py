@@ -85,7 +85,7 @@ while True:
 
     # The "x" key will break the loop and exit the program
     if(char == "x"):
-
+        writeNumber(int(6))
         break
 
 
