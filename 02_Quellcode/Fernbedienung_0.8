@@ -1,0 +1,78 @@
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(21, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(25, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT) #dummy
+import smbus
+import time
+import sys
+
+bus = smbus.SMBus(1)
+address = 0x04
+
+
+from pynput import keyboard
+
+def writeNumber(value):
+    bus.write_byte(address, value)
+
+    return -1
+
+def readNumber():
+        nummer = bus.read_byte(address)
+        return nummer
+  
+
+def on_key_press(key): 
+        if key == keyboard.Key.right:
+            
+            writeNumber(int(2))
+                      
+        if key == keyboard.Key.up:
+            
+            writeNumber(int(1))
+         
+        if key == keyboard.Key.down:
+            
+            writeNumber(int(4))
+          
+        if key == keyboard.Key.left:
+            
+            writeNumber(int(3))
+     
+        if key == keyboard.Key.esc:
+            
+            GPIO.setup(22, GPIO.HIGH)
+          
+         else:
+            writeNumber(int(5))
+           
+        nummer = readNumber()
+        print("Arduino sagt" , nummer)
+        if nummer == int(9):
+            GPIO.output(21, GPIO.HIGH)
+            print("Hindernis da" , nummer)
+        if nummer == int(10):
+            GPIO.output(21, GPIO.LOW)
+            print("keine gefahr" , nummer)
+        
+            
+def on_key_release(key):
+    #motor aus
+    GPIO.output(21, GPIO.LOW)
+    GPIO.output(23, GPIO.LOW)
+    GPIO.output(24, GPIO.LOW)
+    GPIO.output(25, GPIO.LOW)
+
+
+with keyboard.Listener(
+    on_press=on_key_press,
+    on_release=on_key_release) as listener:
+    listener.join()
+    
+    
+GPIO.cleanup()
+
