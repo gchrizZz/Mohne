@@ -10,4 +10,4 @@ Ordnerstruktur:
 - 99_Archiv:             Bereich für Ablage und nicht mehr relevante Artefakte
 
 CAD Modell von Mohne:
-![](https://github.com/gchrizZz/RTW/blob/master/01_Projektmanagement/Mohne_CAD.JPG)
+![](https://github.com/gchrizZz/RTW/blob/master/03_Konstruktion/Exporte/Mohne komplett1.bmp)
