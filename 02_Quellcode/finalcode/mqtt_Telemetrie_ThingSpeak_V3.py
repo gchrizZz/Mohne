@@ -118,7 +118,7 @@ while(True):
     rx_prev = rx
     
     print (" CPU =",cputemp.decode("utf-8"),"RAM =",ramPercent)
-    #print (" LF =",Luftfeuchte," TEMP =",Temperatur)
+    print (" LF =",Luftfeuchte," TEMP =",Temperatur)
     
     # build the payload string
     tPayload = "&field1=" + str(cputemp.decode("utf-8")) + "&field2=" + str(ramPercent) + "&field5=" + str(tx_speed) + "&field6=" + str(rx_speed) #+ "&field3=" +str(Luftfeuchte) + "&field4=" + str(Temperatur)
