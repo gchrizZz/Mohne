@@ -121,7 +121,7 @@ while(True):
     print (" LF =",Luftfeuchte," TEMP =",Temperatur)
     
     # build the payload string
-    tPayload = "&field1=" + str(cputemp.decode("utf-8")) + "&field2=" + str(ramPercent) + "&field5=" + str(tx_speed) + "&field6=" + str(rx_speed) #+ "&field3=" +str(Luftfeuchte) + "&field4=" + str(Temperatur)
+    tPayload = "&field1=" + str(cputemp.decode("utf-8")) + "&field2=" + str(ramPercent) + "&field5=" + str(tx_speed) + "&field6=" + str(rx_speed) + "&field3=" +str(Luftfeuchte) + "&field4=" + str(Temperatur)
     #tPayload2 = "&field1=" + str(cputemp)
     # attempt to publish this data to the topic 
     try:
