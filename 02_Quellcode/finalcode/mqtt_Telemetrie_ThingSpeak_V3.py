@@ -100,7 +100,7 @@ while(True):
     ramPercent = psutil.virtual_memory().percent
 
     # Luftfeuchtigkeit & Temperatur(ambience)
-    #Luftfeuchte, Temperatur = Adafruit_DHT.read_retry(DHTSensor, GPIO_Pin)
+    Luftfeuchte, Temperatur = Adafruit_DHT.read_retry(DHTSensor, GPIO_Pin)
 
     # übertragene Daten
     tx = get_bytes('tx')
