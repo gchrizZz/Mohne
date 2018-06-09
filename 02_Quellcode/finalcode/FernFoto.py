@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(21, GPIO.OUT) #dummy
 import smbus
 import time
 import sys
@@ -53,7 +52,7 @@ def on_key_press(key):
             writeNumber(int(3))
      
         if key == keyboard.Key.esc:
-            
+            writeNumber(int(5))
             print("Mohne sagt Ciao")
             sys.exit("Mohne sagt Ciao")
             
@@ -72,7 +71,7 @@ def on_key_press(key):
             
 def on_key_release(key):
     #motor aus
-    GPIO.output(21, GPIO.LOW)
+    writeNumber(int(5))
    
 
 
