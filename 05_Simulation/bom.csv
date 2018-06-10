@@ -1,0 +1,8 @@
+Name,Quantity,Component
+"U5",1," Arduino Uno R3 "
+"SERVO1",1," Micro Servo "
+"PING1",1," Ultrasonic Distance Sensor "
+"U1",1," Temperature Sensor [TMP36] "
+"Rpot1",1,"250 kOhm,  Potentiometer "
+"U2",1," LCD 16 x 2  "
+"R1",1,"220 ohm Resistor "
